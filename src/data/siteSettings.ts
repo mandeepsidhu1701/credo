@@ -1,0 +1,29 @@
+export const siteSettings = {
+  siteName: "Credo Migration Services Ltd",
+  tagline: "Your trusted partner for New Zealand immigration",
+  siteUrl: "https://credomigration.com",
+  licenseNumber: "201300026",
+  licenseLabel: "IAA License #201300026",
+  email: "info@credomigration.com",
+  phoneNZ: "+64 273 353 475",
+  phoneNZTel: "+64273353475",
+  phoneAU: "+61 491 710 728",
+  phoneAUTel: "+61491710728",
+  whatsapp: "+64273353475",
+  whatsappUrl: "https://wa.me/64273353475",
+  location: "Auckland, New Zealand",
+  businessHours: [
+    "Monday - Friday: 9:00 AM - 5:00 PM",
+    "Saturday: By Appointment",
+    "Sunday: Closed",
+  ],
+  social: {
+    facebook: "https://facebook.com/profile.php?id=100048560833120",
+    linkedin: "https://linkedin.com",
+  },
+  stats: {
+    successRate: "98%",
+    successfulApplications: "500+",
+    yearsExperience: "10+",
+  },
+};
