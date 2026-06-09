@@ -148,7 +148,9 @@ export default function Index() {
         <div className="text-center mt-4">
       
         <Link to="/contact-us">
-          Register Interest Now →
+          <Button className="inline-block bg-red-700 text-white px-8 py-3 rounded-full font-semibold hover:bg-red-800 transition">
+            Register Interest Now →
+          </Button>  
         </Link>          
     </div>
   </div>
