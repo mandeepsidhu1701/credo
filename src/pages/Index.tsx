@@ -139,19 +139,17 @@ export default function Index() {
 
       {/*Info flyer*/}
       <section className="py-10 px-4 bg-gray-50">
-  <div className="max-w-3xl mx-auto">
-    <img
-      src={infoFlyer}
-      alt="Australia Working Holiday Visa 2026 - Ballot Draw Now Open"
-      className="w-full rounded-2xl shadow-xl"
-    />
-    <div className="text-center mt-4">
+        <div className="max-w-3xl mx-auto">
+          <img
+            src={infoFlyer}
+            alt="Australia Working Holiday Visa 2026 - Ballot Draw Now Open"
+            className="w-full rounded-2xl shadow-xl"
+          />
+        <div className="text-center mt-4">
       
-        <a href="/contact-us"
-        className="inline-block bg-red-700 text-white px-8 py-3 rounded-full font-semibold hover:bg-red-800 transition"
-      >
-        Register Interest Now →
-      </a>
+        <Link to="/contact-us">
+          Register Interest Now →
+        </Link>          
     </div>
   </div>
 </section>
