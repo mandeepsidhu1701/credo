@@ -4,6 +4,8 @@ export const siteSettings = {
   siteUrl: "https://credomigration.com",
   licenseNumber: "201300026",
   licenseLabel: "IAA License #201300026",
+  maraNumber:"2318124",
+  maraLable:"MARA License #2318124",
   email: "info@credomigration.com",
   phoneNZ: "+64 273 353 475",
   phoneNZTel: "+64273353475",

@@ -28,26 +28,50 @@ export function Footer() {
           {/* Company Info */}
           <div className="space-y-6">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center">
-                <span className="text-xl font-serif font-bold text-accent">C</span>
-              </div>
+              <img
+                src="/logo.png"
+                alt="Credo Migration Services Ltd logo"
+                className="h-12 w-12 rounded-full object-cover"
+              />
               <div className="flex flex-col">
                 <span className="text-xl font-serif font-bold text-primary-foreground leading-tight">
                   Credo Migration
                 </span>
                 <span className="text-xs text-primary-foreground/70 tracking-wide">
-                  Services Ltd
+                  SERVICES PTY LTD
                 </span>
               </div>
             </div>
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
-              Your trusted partner for New Zealand immigration. Licensed by the Immigration Advisers Authority, 
+              Your trusted partner for Australia and New Zealand immigration. Licensed by the Immigration Advisers Authority and www.mara.gov.au, 
               we provide expert guidance for all visa categories.
             </p>
+
             <div className="flex items-center gap-2 text-sm">
               <Award className="h-5 w-5 text-accent" />
-              <span>IAA License #201300026</span>
+                <a
+                 href="https://www.iaa.govt.nz/for-advisers/adviser-tools/licensing-toolkit/register-of-licensed-immigration-advisers/"
+                 target="_blank"
+                rel="noopener noreferrer"
+                 className="px-4 py-2 rounded-md text-sm font-medium transition-colors link-underline"
+                >
+                <span>IAA License #201300026</span>
+              </a>
             </div>
+            
+
+            <div className="flex items-center gap-2 text-sm">
+              <Award className="h-5 w-5 text-accent" />
+                <a
+                  href="https://portal.mara.gov.au/search-the-register-of-migration-agents/register-of-migration-agent-details/?ContactID=ec101870-9aec-ec11-bb3d-0022481866de"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 rounded-md text-sm font-medium transition-colors link-underline"
+                >              
+                <span>MARA License #2318124</span>
+              </a>
+            </div>
+
             <div className="flex gap-3">
               <a
                 href="https://facebook.com"

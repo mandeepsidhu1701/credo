@@ -51,10 +51,22 @@ export function Header() {
               <span>info@credomigration.com</span>
             </a>
           </div>
+          <a href="https://www.iaa.govt.nz/for-advisers/adviser-tools/licensing-toolkit/register-of-licensed-immigration-advisers/" 
+          className="px-4 py-2 rounded-md text-sm font-medium transition-colors link-underline" 
+          target="_blank">
           <div className="flex items-center gap-2">
             <span className="text-primary-foreground/70">Licensed Immigration Adviser</span>
             <span className="text-accent font-semibold">#201300026</span>
           </div>
+          </a>
+          <a href="https://portal.mara.gov.au/search-the-register-of-migration-agents/register-of-migration-agent-details/?ContactID=ec101870-9aec-ec11-bb3d-0022481866de" 
+          className="px-4 py-2 rounded-md text-sm font-medium transition-colors link-underline" 
+          target="_blank">
+          <div className="flex items-center gap-2">
+            <span className="text-primary-foreground/70">MARA Licensed</span>
+            <span className="text-accent font-semibold">#2318124</span>
+          </div>
+          </a>
         </div>
       </div>
 
@@ -71,15 +83,17 @@ export function Header() {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3 group">
-              <div className="w-12 h-12 rounded-lg gradient-hero flex items-center justify-center">
-                <span className="text-xl font-serif font-bold text-accent">C</span>
-              </div>
+              <img src="/logo.png" 
+                    className="h-20 w-20 object-contain" 
+                    alt="Credo Migration" 
+              />
+              <div className="h-10 w-px bg-gray-300 mx-4" />
               <div className="flex flex-col">
-                <span className="text-xl font-serif font-bold text-primary leading-tight">
+                <span className="text-xl font-bold text-gray-900 leading-tight">
                   Credo Migration
                 </span>
-                <span className="text-xs text-muted-foreground tracking-wide">
-                  Services Ltd
+                <span className="text-sm text-gray-500 tracking-wider uppercase">
+                  Services PTY LTD
                 </span>
               </div>
             </Link>

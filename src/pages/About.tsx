@@ -93,7 +93,6 @@ export default function About() {
               </p>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 Our founder, Manisha Verma, is a licensed immigration adviser with
-                the Immigration Advisers Authority (IAA License #201300026). With
                 extensive experience across all visa categories, Manisha leads our
                 team with dedication and expertise.
               </p>
@@ -109,12 +108,40 @@ export default function About() {
                   <Award className="h-8 w-8 text-accent" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground text-lg mb-1">
-                    IAA Licensed #201300026
-                  </h3>
+                  <a
+                    href="https://www.iaa.govt.nz/for-advisers/adviser-tools/licensing-toolkit/register-of-licensed-immigration-advisers/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 rounded-md text-sm font-medium transition-colors link-underline"
+                  >
+                    <h3 className="font-semibold text-foreground text-lg mb-1">
+                      IAA Licensed #201300026
+                    </h3>
+                  </a>
                   <p className="text-muted-foreground text-sm">
                     Fully licensed by the Immigration Advisers Authority of New
                     Zealand
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-6 p-6 bg-muted rounded-xl">
+                <div className="w-16 h-16 rounded-full gradient-hero flex items-center justify-center shrink-0">
+                  <Award className="h-8 w-8 text-accent" />
+                </div>
+                <div>
+                  <a
+                    href="https://portal.mara.gov.au/search-the-register-of-migration-agents/register-of-migration-agent-details/?ContactID=ec101870-9aec-ec11-bb3d-0022481866de"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 rounded-md text-sm font-medium transition-colors link-underline"
+                  > 
+                    <h3 className="font-semibold text-foreground text-lg mb-1">
+                      MARA Licensed #2318124
+                    </h3>
+                  </a>
+                  <p className="text-muted-foreground text-sm">
+                    Fully licensed by the Office of the Migration Agents Registration Authority, Australia
                   </p>
                 </div>
               </div>

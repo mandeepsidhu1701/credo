@@ -7,6 +7,7 @@ import { ServiceCard } from "@/components/ui/service-card";
 import { TestimonialCard } from "@/components/ui/testimonial-card";
 import { PostCard } from "@/components/ui/post-card";
 import heroBg from "@/assets/hero-bg.jpg";
+import infoFlyer from "@/assets/info-flyer.jpeg";
 import {
   Users,
   Shield,
@@ -71,11 +72,17 @@ export default function Index() {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 text-accent text-sm font-medium mb-6 animate-fade-in-down">
               <Shield className="h-4 w-4" />
               <span>Licensed Immigration Adviser #201300026</span>
+             
+            </div>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 text-accent text-sm font-medium mb-6 animate-fade-in-down">
+              <Shield className="h-4 w-4" />
+              <span>Migration Agents Registration Number #2318124</span>
+             
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-bold text-primary-foreground mb-6 animate-fade-in-up">
               Your Journey to{" "}
-              <span className="text-gradient-gold">New Zealand</span>{" "}
+              <span className="text-gradient-gold">Australia and New Zealand</span>{" "}
               Starts Here
             </h1>
 
@@ -129,6 +136,25 @@ export default function Index() {
         {/* Decorative elements */}
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
       </section>
+
+      {/*Info flyer*/}
+      <section className="py-10 px-4 bg-gray-50">
+  <div className="max-w-3xl mx-auto">
+    <img
+      src={infoFlyer}
+      alt="Australia Working Holiday Visa 2026 - Ballot Draw Now Open"
+      className="w-full rounded-2xl shadow-xl"
+    />
+    <div className="text-center mt-4">
+      
+        <a href="/contact-us"
+        className="inline-block bg-red-700 text-white px-8 py-3 rounded-full font-semibold hover:bg-red-800 transition"
+      >
+        Register Interest Now →
+      </a>
+    </div>
+  </div>
+</section>
 
       {/* Features Section */}
       <section className="section-padding bg-background">
