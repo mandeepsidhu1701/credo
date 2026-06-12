@@ -27,34 +27,69 @@ export default function Contact() {
     service: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const name = formData.name.trim();
-    const email = formData.email.trim();
-    const phone = formData.phone.trim();
-    const service = formData.service;
-    const messageText = formData.message.trim();
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
 
-    if (!name || !email || !service || !messageText) {
-      toast.error("Please fill in all required fields.");
-      return;
+  const name = formData.name.trim();
+  const email = formData.email.trim();
+  const phone = formData.phone.trim();
+  const service = formData.service;
+  const messageText = formData.message.trim();
+
+  if (!name || !email || !service || !messageText) {
+    toast.error("Please fill in all required fields.");
+    return;
+  }
+
+  setIsSubmitting(true);
+
+  try {
+    const nameParts = name.split(" ");
+    const firstName = nameParts[0] || name;
+    const lastName = nameParts.slice(1).join(" ") || "Not provided";
+
+    const res = await fetch(import.meta.env.VITE_CONTACT_API_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        firstName,
+        lastName,
+        email,
+        phone: phone || "Not provided",
+        country: "Not provided",
+        destination: service,
+        level: "Migration consultation",
+        message: messageText,
+        website: ""
+      }),
+    });
+
+    const data = await res.json().catch(() => ({}));
+
+    if (!res.ok || !data.ok) {
+      throw new Error(data.error || `Submission failed (${res.status})`);
     }
 
-    const subject = `Consultation enquiry — ${service}`;
-    const body =
-      `Name: ${name}\n` +
-      `Email: ${email}\n` +
-      `Phone: ${phone || "—"}\n` +
-      `Service: ${service}\n\n` +
-      `Message:\n${messageText}`;
+    toast.success("Thank you! Your enquiry has been sent successfully.");
 
-    const mailto = `mailto:${siteSettings.email}?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailto;
-    toast.success("Opening your email app to send the enquiry…");
-  };
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      service: "",
+      message: "",
+    });
+  } catch (err: any) {
+    toast.error(
+      err?.message ||
+        "Sorry, we couldn't send your enquiry right now. Please try again."
+    );
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 
   return (
     <Layout>
@@ -175,7 +210,7 @@ export default function Contact() {
                   <Button type="submit" className="w-full btn-gold">
                     <span className="flex items-center gap-2">
                       <Send className="h-4 w-4" />
-                      Send via Email
+                      {isSubmitting ? "Sending..." : "Send Enquiry"}
                     </span>
                   </Button>
                 </form>

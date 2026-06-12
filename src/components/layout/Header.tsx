@@ -46,6 +46,10 @@ export function Header() {
               <Phone className="h-4 w-4" />
               <span>+64 273 353 475</span>
             </a>
+              <a href="tel:+61491710728" className="flex items-center gap-2 hover:text-accent transition-colors">
+                <Phone className="h-4 w-4" />
+                <span>+61 491 710 728 (AU)</span>
+              </a>
             <a href="mailto:info@credomigration.com" className="flex items-center gap-2 hover:text-accent transition-colors">
               <Mail className="h-4 w-4" />
               <span>info@credomigration.com</span>
@@ -173,6 +177,10 @@ export function Header() {
               <a href="tel:+64273353475" className="flex items-center gap-2">
                 <Phone className="h-4 w-4" />
                 <span>+64 273 353 475</span>
+              </a>
+              <a href="tel:+61491710728" className="flex items-center gap-2">
+                <Phone className="h-4 w-4" />
+                <span>+61 491 710 728 (AU)</span>
               </a>
               <a href="mailto:info@credomigration.com" className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
