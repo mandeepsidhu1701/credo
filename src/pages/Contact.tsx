@@ -112,7 +112,7 @@ const handleSubmit = async (e: React.FormEvent) => {
               <h2 className="text-2xl font-serif font-bold text-foreground mb-2">
                 Book a Consultation
               </h2>
-              <p className="text-muted-foreground mb-4">
+              {/* <p className="text-muted-foreground mb-4">
                 Fill out the form below — it will open your email app pre-filled
                 so you can send the enquiry to{" "}
                 <a
@@ -126,7 +126,7 @@ const handleSubmit = async (e: React.FormEvent) => {
               <p className="text-xs text-muted-foreground mb-8 italic">
                 Note: this is a static site. Backend/email submission setup is
                 required before going live with direct form delivery.
-              </p>
+              </p> */}
 
               <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

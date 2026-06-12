@@ -5,6 +5,7 @@ import { PageHero } from "@/components/ui/page-hero";
 import { Button } from "@/components/ui/button";
 import { pages } from "@/data/pages";
 import { siteSettings } from "@/data/siteSettings";
+import trustBadge from "@/assets/trust.png";
 import {
   Award,
   Target,
@@ -124,6 +125,10 @@ export default function About() {
                   </p>
                 </div>
               </div>
+
+                            <div className="grid grid-cols-2 gap-8 items-center justify-items-center">
+                              <img src={trustBadge} alt="IAA Licensed Adviser" />
+                            </div>
 
               <div className="flex items-center gap-6 p-6 bg-muted rounded-xl">
                 <div className="w-16 h-16 rounded-full gradient-hero flex items-center justify-center shrink-0">

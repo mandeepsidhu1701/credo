@@ -8,6 +8,7 @@ import { TestimonialCard } from "@/components/ui/testimonial-card";
 import { PostCard } from "@/components/ui/post-card";
 import heroBg from "@/assets/hero-bg.jpg";
 import infoFlyer from "@/assets/info-flyer.jpeg";
+import trustBadge from "@/assets/trust.png";
 import {
   Users,
   Shield,
@@ -230,6 +231,12 @@ export default function Index() {
                 immigration adviser with the Immigration Advisers Authority (IAA
                 #201300026), we have been helping individuals and families
                 achieve their New Zealand migration dreams.
+              </p>
+              <div className="grid grid-cols-2 gap-8 items-center justify-items-center">
+                <img src={trustBadge} alt="IAA Licensed Adviser" />
+              </div>
+              <p className="test-mutes-foreground leading-relaxed mb-8">
+                Licensed Immigration Adviser (IAA #201300026) & Registered Migration Agent (MARN #2318124)
               </p>
               <p className="text-muted-foreground leading-relaxed mb-8">
                 Whether you're looking to study, work, or settle permanently in
