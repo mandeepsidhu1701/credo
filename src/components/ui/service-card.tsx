@@ -34,10 +34,10 @@ export function ServiceCard({
       <p className="text-muted-foreground text-sm leading-relaxed flex-1 mb-4">
         {description}
       </p>
-      <div className="flex items-center gap-2 text-accent font-medium text-sm">
+      {/* <div className="flex items-center gap-2 text-accent font-medium text-sm">
         <span>Learn More</span>
         <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-      </div>
+      </div> */}
     </Link>
   );
 }

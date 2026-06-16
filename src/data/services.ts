@@ -17,58 +17,60 @@ export interface ServiceSummary {
 }
 
 export const services: ServiceSummary[] = [
-  {
-    id: "skilled-migrant",
-    title: "Skilled Migrant Category",
-    description:
-      "Permanent residence pathway for skilled workers with qualifications and work experience in demand in New Zealand.",
-    icon: Briefcase,
-    href: "/services#skilled-migrant",
-  },
-  {
+ {
     id: "work-visa",
-    title: "Work Visas",
+    title: "Work Visas & AEWV",
     description:
-      "Essential Skills, AEWV, and other work visa categories for temporary and long-term employment in New Zealand.",
+      "Helping employees and employers navigate Accredited Employer Work Visa requirements and work visa applications.",
     icon: Clock,
     href: "/services#work-visa",
   },
   {
+    id: "skilled-migrant",
+    title: "Residency Pathways",
+    description:
+      "Expert guidance for Skilled Migrant Category, Residence from Work, and other residency options.",
+    icon: Briefcase,
+    href: "/services#skilled-migrant",
+  },
+  
+  {
     id: "student-visa",
     title: "Student Visas",
     description:
-      "Complete support for international students including visa processing, accommodation, and settling in New Zealand.",
+      "Support for international students from application through settlement in New Zealand and Australia.",
     icon: GraduationCap,
     href: "/services#student-visa",
   },
   {
     id: "family-visa",
-    title: "Family Category",
+    title: "Partnership & Family Visas",
     description:
-      "Partner visas, parent category, and dependent visas to reunite your family in New Zealand.",
+      "Bringing families together through partnership, dependent child, and family-sponsored visa pathways.",
     icon: Users,
     href: "/services#family-visa",
   },
   {
-    id: "investor",
-    title: "Investor & Entrepreneur",
+    id: "employer-accreditation",
+    title: "Employer Accreditation & Job Checks",
     description:
-      "Business migration pathways for investors and entrepreneurs looking to establish or grow business in NZ.",
+      "Helping New Zealand businesses become accredited employers and complete Job Check applications.",
     icon: TrendingUp,
-    href: "/services#investor",
+    href: "/services#employer-accreditation",
   },
   {
-    id: "visitor-visa",
-    title: "Visitor Visas",
+    id: "appeals",
+    title: "Complex Immigration Cases",
     description:
-      "Tourist, business visitor, and other temporary entry visas for short-term stays in New Zealand.",
+      "Section 61 requests, IPT appeals, declined applications, and difficult immigration situations.",
     icon: Plane,
-    href: "/services#visitor-visa",
+    href: "/services#appeals",
   },
 ];
 
 export const consultationServiceOptions = [
   "Skilled Migrant Category",
+  "Employer Accreditation & Job Checks",
   "Work Visa (AEWV/Essential Skills)",
   "Student Visa",
   "Family/Partner Visa",

@@ -124,7 +124,7 @@ export function Header() {
             <div className="hidden lg:flex items-center gap-4">
               <Link to="/contact-us">
                 <Button className="btn-gold">
-                  Book Consultation
+                  Request a Consultation
                 </Button>
               </Link>
             </div>

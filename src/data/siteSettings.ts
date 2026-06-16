@@ -15,7 +15,7 @@ export const siteSettings = {
   whatsappUrl: "https://wa.me/64273353475",
   location: "Auckland, New Zealand",
   businessHours: [
-    "Monday - Friday: 9:00 AM - 5:00 PM",
+    "Monday - Friday: By Appointment Only",
     "Saturday: By Appointment",
     "Sunday: Closed",
   ],

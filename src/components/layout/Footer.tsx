@@ -160,11 +160,12 @@ export function Footer() {
               <li className="flex items-start gap-3 text-primary-foreground/80 text-sm">
                 <MapPin className="h-5 w-5 shrink-0 mt-0.5" />
                 <span>Auckland, New Zealand</span>
+                <span>Melbourne, Australia</span>
               </li>
               <li className="flex items-start gap-3 text-primary-foreground/80 text-sm">
                 <Clock className="h-5 w-5 shrink-0 mt-0.5" />
                 <div>
-                  <div>Mon - Fri: 9:00 AM - 5:00 PM</div>
+                  <div>Mon - Fri: By Appointment Only</div>
                   <div>Sat: By Appointment</div>
                 </div>
               </li>

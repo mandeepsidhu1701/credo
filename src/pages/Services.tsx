@@ -17,6 +17,8 @@ import {
   Clock,
   CheckCircle,
   ArrowRight,
+  Building2,
+  FileCheck,
 } from "lucide-react";
 
 const serviceCategories = [
@@ -34,6 +36,36 @@ const serviceCategories = [
       "Job search support and employer liaison",
       "Residence application submission",
     ],
+  },
+  {
+  id: "employer-accreditation",
+  icon: Building2,
+  title: "Employer Accreditation",
+  subtitle: "For New Zealand Businesses",
+  description:
+    "Employer Accreditation is required for New Zealand businesses wishing to hire migrant workers under the Accredited Employer Work Visa (AEWV) scheme. We assist employers throughout the accreditation process, ensuring compliance with Immigration New Zealand requirements.",
+  features: [
+    "Accreditation eligibility assessment",
+    "Business documentation review",
+    "Accreditation application preparation",
+    "Immigration compliance guidance",
+    "Support with renewals and ongoing obligations",
+  ],
+  },
+  {
+  id: "job-check-applications",
+  icon: FileCheck,
+  title: "Job Check Applications",
+  subtitle: "Hiring Migrant Workers",
+  description:
+    "A Job Check is required before an accredited employer can offer certain roles to migrant workers under the AEWV pathway. We guide employers through the process, ensuring role requirements meet Immigration New Zealand standards.",
+  features: [
+    "Job Check eligibility assessment",
+    "Labour market and advertising guidance",
+    "Role description review",
+    "Job Check application preparation",
+    "Support through Immigration NZ requests",
+  ],
   },
   {
     id: "work-visa",

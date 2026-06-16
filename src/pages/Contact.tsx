@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import OfficeMap from "@/components/ui/OfficeMap";
 import {
   Select,
   SelectContent,
@@ -110,7 +111,7 @@ const handleSubmit = async (e: React.FormEvent) => {
             {/* Contact Form */}
             <div className="card-elevated p-8">
               <h2 className="text-2xl font-serif font-bold text-foreground mb-2">
-                Book a Consultation
+                Request a Consultation
               </h2>
               {/* <p className="text-muted-foreground mb-4">
                 Fill out the form below — it will open your email app pre-filled
@@ -197,7 +198,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                     <Label htmlFor="message">Your Message *</Label>
                     <Textarea
                       id="message"
-                      placeholder="Tell us about your situation and how we can help..."
+                      placeholder="Please tell us about your visa situation, current location, and the type of advice you require. Our team will review your enquiry and arrange a suitable consultation time...."
                       rows={5}
                       value={formData.message}
                       onChange={(e) =>
@@ -210,7 +211,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                   <Button type="submit" className="w-full btn-gold">
                     <span className="flex items-center gap-2">
                       <Send className="h-4 w-4" />
-                      {isSubmitting ? "Sending..." : "Send Enquiry"}
+                      {isSubmitting ? "Sending..." : "Submit Enquiry"}
                     </span>
                   </Button>
                 </form>
@@ -280,9 +281,9 @@ const handleSubmit = async (e: React.FormEvent) => {
                       <p className="text-muted-foreground">
                         Auckland, New Zealand
                       </p>
-                      <p className="text-sm text-muted-foreground mt-1">
-                        Consultations available in-person and online
-                      </p>
+                      <p className="text-muted-foreground">
+                        Melbourne, Australia
+                      </p> 
                     </div>
                   </div>
 
@@ -292,7 +293,17 @@ const handleSubmit = async (e: React.FormEvent) => {
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground mb-1">
-                        Business Hours
+                        Consultations
+                      </h3>                     
+                      <p className="text-sm text-muted-foreground mt-1">
+                         By appointment only
+
+                        Please send your enquiry first. 
+                        Once we review your situation, we will arrange a suitable consultation time 
+                        either online or face-to-face.
+                      </p>
+                      <h3 className="font-semibold text-foreground mb-1">
+                        Consultation Hours
                       </h3>
                       {siteSettings.businessHours.map((line) => (
                         <p key={line} className="text-muted-foreground">
@@ -326,22 +337,11 @@ const handleSubmit = async (e: React.FormEvent) => {
               </div>
 
               {/* Map Placeholder */}
-              <div className="card-elevated overflow-hidden">
-                <div className="aspect-video bg-muted flex items-center justify-center">
-                  <div className="text-center p-6">
-                    <MapPin className="h-12 w-12 text-accent mx-auto mb-4" />
-                    <h3 className="font-semibold text-foreground mb-2">
-                      Auckland, New Zealand
-                    </h3>
-                    <p className="text-sm text-muted-foreground">
-                      Consultations available in-person and via video call
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <OfficeMap />
+    
 
               {/* Quick Contact CTA */}
-              <div className="card-elevated p-6 gradient-hero">
+              {/* <div className="card-elevated p-6 gradient-hero">
                 <h3 className="font-serif font-semibold text-primary-foreground text-lg mb-2">
                   Need Immediate Assistance?
                 </h3>
@@ -354,7 +354,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                     Call +64 273 353 475
                   </Button>
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
