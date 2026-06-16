@@ -188,8 +188,8 @@ export default function Index() {
         <div className="container-custom">
           <SectionHeader
             subtitle="Our Services"
-            title="Expert Immigration Solutions"
-            description="We provide comprehensive visa and immigration services to help you achieve your New Zealand migration goals."
+            title="Trusted Immigration Advice for Individuals & Employers"
+            description="From work visas and residency applications to employer accreditation and complex immigration matters, Credo Migration Services provides professional guidance tailored to your circumstances."
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -202,16 +202,61 @@ export default function Index() {
             ))}
           </div>
 
+        </div>
+      </section>
+      {/* CTA */}
+      <section className="section-padding bg-background">
+        <div className="container-custom">
+        <div className="max-w-3xl mx-auto text-center mb-12">
+         <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">
+          Not Sure Which Visa Option Is Right For You?
+        </h2>
+        <p className="text-muted-foreground text-lg">
+          Get an Initial Assessment and Professional Advice from a Licensed Immigration Adviser.
+        </p>
+        </div>  
           <div className="text-center mt-12">
-            <Link to="/services">
+            <Link to="/contact-us">
               <Button variant="outline" className="px-8">
-                View All Services
+                Book a Consultation
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
           </div>
         </div>
-      </section>
+        </section>
+      {/* Testimonials Section */}
+      <section className="section-padding bg-muted/50">
+        <div className="container-custom">
+          <SectionHeader
+            subtitle="Testimonials"
+            title="What Our Clients Say"
+            description="Read about the experiences of our satisfied clients who have successfully achieved their New Zealand immigration goals."
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {featuredTestimonials.map((testimonial, index) => (
+              <TestimonialCard
+                key={testimonial.id}
+                name={testimonial.name}
+                location={testimonial.location}
+                rating={testimonial.rating}
+                testimonial={testimonial.text}
+                className={`animate-fade-in-up animation-delay-${(index + 1) * 100}`}
+              />
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Link to="/testimonials">
+              <Button variant="outline" className="px-8">
+                View All Testimonials
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>        
 
       {/* About Section */}
       <section className="section-padding bg-background">
@@ -303,38 +348,7 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="section-padding bg-muted/50">
-        <div className="container-custom">
-          <SectionHeader
-            subtitle="Testimonials"
-            title="What Our Clients Say"
-            description="Read about the experiences of our satisfied clients who have successfully achieved their New Zealand immigration goals."
-          />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {featuredTestimonials.map((testimonial, index) => (
-              <TestimonialCard
-                key={testimonial.id}
-                name={testimonial.name}
-                location={testimonial.location}
-                rating={testimonial.rating}
-                testimonial={testimonial.text}
-                className={`animate-fade-in-up animation-delay-${(index + 1) * 100}`}
-              />
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <Link to="/testimonials">
-              <Button variant="outline" className="px-8">
-                View All Testimonials
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* Latest News Section */}
       <section className="section-padding bg-background">
