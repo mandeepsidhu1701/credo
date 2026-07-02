@@ -14,15 +14,24 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { posts, postCategories as categories } from "@/data/posts";
+import { usePosts } from "@/hooks/usePosts";
 import { pages } from "@/data/pages";
 import { siteSettings } from "@/data/siteSettings";
 
 export default function Posts() {
+   const { data: posts, isLoading, error } = usePosts();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All Categories");
 
-  const filteredPosts = posts.filter((post) => {
+  const allPosts = posts ?? [];
+
+  // Build the category list from the posts that actually exist
+  const categories = [
+    "All Categories",
+    ...Array.from(new Set(allPosts.map((p) => p.category).filter(Boolean))).sort(),
+  ];
+
+  const filteredPosts = allPosts.filter((post) => {
     const matchesSearch =
       post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       post.excerpt?.toLowerCase().includes(searchQuery.toLowerCase());
@@ -84,7 +93,15 @@ export default function Posts() {
       {/* Posts Grid */}
       <section className="section-padding bg-background">
         <div className="container-custom">
-          {filteredPosts.length > 0 ? (
+          {isLoading ? (
+            <p className="text-center text-muted-foreground py-16">
+              Loading articles…
+            </p>
+          ) : error ? (
+            <p className="text-center text-muted-foreground py-16">
+              Unable to load articles right now. Please try again later.
+            </p>
+          ) : filteredPosts.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredPosts.map((post, index) => (
                 <PostCard

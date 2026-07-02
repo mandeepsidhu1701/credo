@@ -15,12 +15,12 @@ import {
 } from "lucide-react";
 import { format } from "date-fns";
 import { toast } from "sonner";
-import { getPostBySlug } from "@/data/posts";
+import { usePost } from "@/hooks/usePosts";
 import { siteSettings } from "@/data/siteSettings";
 
 export default function PostDetail() {
   const { slug } = useParams<{ slug: string }>();
-  const post = slug ? getPostBySlug(slug) : undefined;
+const { data: post, isLoading } = usePost(slug ?? "");
 
   const handleShare = (platform: string) => {
     const url = window.location.href;
@@ -39,7 +39,17 @@ export default function PostDetail() {
       window.open(shareUrls[platform], "_blank", "width=600,height=400");
     }
   };
-
+  if (isLoading) {
+    return (
+      <Layout>
+        <div className="section-padding">
+          <div className="container-custom text-center">
+            <p className="text-muted-foreground">Loading article…</p>
+          </div>
+        </div>
+      </Layout>
+    );
+  }
   if (!post) {
     return (
       <Layout>
@@ -63,7 +73,9 @@ export default function PostDetail() {
     );
   }
 
-  const formattedDate = format(new Date(post.publishedAt), "MMMM dd, yyyy");
+  const formattedDate = post.publishedAt
+    ? format(new Date(post.publishedAt), "MMMM dd, yyyy")
+    : "";
   const canonical = `${siteSettings.siteUrl}/posts/${post.slug}`;
 
   return (
@@ -83,7 +95,7 @@ export default function PostDetail() {
             headline: post.title,
             datePublished: post.publishedAt,
             articleSection: post.category,
-            keywords: post.tags.join(", "),
+
           })}
         </script>
       </Helmet>
@@ -168,21 +180,7 @@ export default function PostDetail() {
                   </div>
                 </div>
 
-                {post.tags && post.tags.length > 0 && (
-                  <div className="card-elevated p-6">
-                    <h3 className="font-semibold text-foreground mb-4">Tags</h3>
-                    <div className="flex flex-wrap gap-2">
-                      {post.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="px-3 py-1 rounded-full bg-muted text-sm text-muted-foreground"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                )}
+
 
                 <div className="card-elevated p-6 gradient-hero">
                   <h3 className="font-semibold text-primary-foreground mb-2">
