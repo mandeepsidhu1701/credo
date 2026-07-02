@@ -19,8 +19,8 @@ import {
   Star,
 } from "lucide-react";
 import { services } from "@/data/services";
-import { useTestimonials } from "@/hooks/useTestimonials";
-import { usePosts } from "@/hooks/usePosts";
+import { featuredTestimonials } from "@/data/testimonials";
+import { latestPosts } from "@/data/posts";
 import { pages } from "@/data/pages";
 import { siteSettings } from "@/data/siteSettings";
 
@@ -48,15 +48,6 @@ const features = [
 ];
 
 export default function Index() {
-  const { data: testimonials, isLoading: testimonialsLoading } = useTestimonials();
-  const { data: posts, isLoading: postsLoading } = usePosts();
-    // Homepage shows only featured testimonials (fallback to first 3 if none flagged)
-  const featured = testimonials?.filter((t) => t.isFeatured) ?? [];
-  const featuredTestimonials = featured.length > 0 ? featured : (testimonials ?? []);
-  const homeTestimonials = featuredTestimonials.slice(0, 3);
-
-  // Latest 3 posts (API already sorts newest-first)
-  const latestPosts = posts?.slice(0, 3) ?? [];
   return (
     <Layout>
       <Helmet>
@@ -148,7 +139,7 @@ export default function Index() {
       </section>
 
       {/*Info flyer*/}
-      {/* <section className="py-10 px-4 bg-gray-50">
+      <section className="py-10 px-4 bg-gray-50">
         <div className="max-w-3xl mx-auto">
           <img
             src={infoFlyer}
@@ -163,7 +154,7 @@ export default function Index() {
             </Link>          
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* Features Section */}
       <section className="section-padding bg-background">
@@ -243,13 +234,13 @@ export default function Index() {
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {homeTestimonials.map((testimonial, index) => (
+            {featuredTestimonials.map((testimonial, index) => (
               <TestimonialCard
                 key={testimonial.id}
-                name={testimonial.clientName}
+                name={testimonial.name}
                 location={testimonial.location}
                 rating={testimonial.rating}
-                testimonial={testimonial.testimonialText}
+                testimonial={testimonial.text}
                 className={`animate-fade-in-up animation-delay-${(index + 1) * 100}`}
               />
             ))}
