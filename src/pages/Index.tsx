@@ -139,7 +139,7 @@ export default function Index() {
       </section>
 
       {/*Info flyer*/}
-      <section className="py-10 px-4 bg-gray-50">
+      {/* <section className="py-10 px-4 bg-gray-50">
         <div className="max-w-3xl mx-auto">
           <img
             src={infoFlyer}
@@ -154,7 +154,7 @@ export default function Index() {
             </Link>          
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Features Section */}
       <section className="section-padding bg-background">
