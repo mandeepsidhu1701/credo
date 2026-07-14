@@ -5,12 +5,13 @@ import { PageHero } from "@/components/ui/page-hero";
 import { TestimonialCard } from "@/components/ui/testimonial-card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Star } from "lucide-react";
-import { testimonials } from "@/data/testimonials";
+import { useTestimonials } from "@/hooks/useTestimonials";
 import { pages } from "@/data/pages";
 import { siteSettings } from "@/data/siteSettings";
 
 export default function Testimonials() {
-  const sorted = [...testimonials].sort(
+  const { data: testimonials, isLoading, error } = useTestimonials();
+  const sorted = [...(testimonials ?? [])].sort(
     (a, b) => Number(b.isFeatured) - Number(a.isFeatured)
   );
   return (
@@ -62,14 +63,32 @@ export default function Testimonials() {
 
       <section className="section-padding bg-background">
         <div className="container-custom">
+          {isLoading && (
+            <p className="text-center text-muted-foreground py-12">
+              Loading testimonials…
+            </p>
+          )}
+
+          {error && (
+            <p className="text-center text-muted-foreground py-12">
+              Unable to load testimonials right now. Please try again later.
+            </p>
+          )}
+
+          {!isLoading && !error && sorted.length === 0 && (
+            <p className="text-center text-muted-foreground py-12">
+              No testimonials yet.
+            </p>
+          )}
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {sorted.map((testimonial, index) => (
               <TestimonialCard
                 key={testimonial.id}
-                name={testimonial.name}
+                name={testimonial.clientName}
                 location={testimonial.location}
                 rating={testimonial.rating}
-                testimonial={testimonial.text}
+                testimonial={testimonial.testimonialText}
                 className={`animate-fade-in-up animation-delay-${((index % 6) + 1) * 100}`}
               />
             ))}
