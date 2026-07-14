@@ -7,7 +7,6 @@ import { ServiceCard } from "@/components/ui/service-card";
 import { TestimonialCard } from "@/components/ui/testimonial-card";
 import { PostCard } from "@/components/ui/post-card";
 import heroBg from "@/assets/hero-bg.jpg";
-import infoFlyer from "@/assets/info-flyer.jpeg";
 import trustBadge from "@/assets/trust.png";
 import {
   Users,
@@ -19,8 +18,8 @@ import {
   Star,
 } from "lucide-react";
 import { services } from "@/data/services";
-import { featuredTestimonials } from "@/data/testimonials";
-import { latestPosts } from "@/data/posts";
+import { useTestimonials } from "@/hooks/useTestimonials";
+import { usePosts } from "@/hooks/usePosts";
 import { pages } from "@/data/pages";
 import { siteSettings } from "@/data/siteSettings";
 
@@ -48,6 +47,15 @@ const features = [
 ];
 
 export default function Index() {
+  const { data: testimonials, isLoading: testimonialsLoading } = useTestimonials();
+  const { data: posts, isLoading: postsLoading } = usePosts();
+    // Homepage shows only featured testimonials (fallback to first 3 if none flagged)
+  const featured = testimonials?.filter((t) => t.isFeatured) ?? [];
+  const featuredTestimonials = featured.length > 0 ? featured : (testimonials ?? []);
+  const homeTestimonials = featuredTestimonials.slice(0, 3);
+
+  // Latest 3 posts (API already sorts newest-first)
+  const latestPosts = posts?.slice(0, 3) ?? [];
   return (
     <Layout>
       <Helmet>
@@ -138,24 +146,6 @@ export default function Index() {
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
       </section>
 
-      {/*Info flyer*/}
-      {/* <section className="py-10 px-4 bg-gray-50">
-        <div className="max-w-3xl mx-auto">
-          <img
-            src={infoFlyer}
-            alt="Australia Working Holiday Visa 2026 - Ballot Draw Now Open"
-            className="w-full rounded-2xl shadow-xl"
-          />
-          <div className="text-center mt-4">     
-            <Link to="/contact-us">
-              <Button className="inline-block bg-red-700 text-white px-8 py-3 rounded-full font-semibold hover:bg-red-800 transition">
-                Register Interest Now →
-              </Button>  
-            </Link>          
-          </div>
-        </div>
-      </section> */}
-
       {/* Features Section */}
       <section className="section-padding bg-background">
         <div className="container-custom">
@@ -234,13 +224,13 @@ export default function Index() {
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {featuredTestimonials.map((testimonial, index) => (
+            {homeTestimonials.map((testimonial, index) => (
               <TestimonialCard
                 key={testimonial.id}
-                name={testimonial.name}
+                name={testimonial.clientName}
                 location={testimonial.location}
                 rating={testimonial.rating}
-                testimonial={testimonial.text}
+                testimonial={testimonial.testimonialText}
                 className={`animate-fade-in-up animation-delay-${(index + 1) * 100}`}
               />
             ))}
