@@ -24,7 +24,7 @@ export default function Testimonials() {
       <PageHero
         subtitle="Testimonials"
         title="What Our Clients Say"
-        description="Read the experiences of hundreds of satisfied clients who have successfully achieved their New Zealand immigration goals with our help."
+        description="Read the experiences of over a thousand satisfied clients who have successfully achieved their New Zealand immigration goals with our help."
       />
 
       {/* Stats Section */}
@@ -39,7 +39,7 @@ export default function Testimonials() {
             </div>
             <div className="text-center">
               <div className="text-4xl md:text-5xl font-serif font-bold text-accent mb-2">
-                500+
+                1000+
               </div>
               <div className="text-muted-foreground">Happy Clients</div>
             </div>
@@ -53,7 +53,7 @@ export default function Testimonials() {
             </div>
             <div className="text-center">
               <div className="text-4xl md:text-5xl font-serif font-bold text-accent mb-2">
-                10+
+                13+
               </div>
               <div className="text-muted-foreground">Years Experience</div>
             </div>

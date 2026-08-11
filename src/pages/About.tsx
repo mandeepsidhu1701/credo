@@ -90,7 +90,7 @@ export default function About() {
                 provide first-class immigration advisory services with a personal
                 touch. Based in Auckland, New Zealand, we have been helping
                 individuals and families navigate the complex immigration landscape
-                for over a decade.
+                for more than 13 years.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 Our founder, Manisha Verma, is a licensed immigration adviser with
@@ -176,7 +176,7 @@ export default function About() {
                       ))}
                     </div>
                     <p className="text-primary-foreground/70 text-sm">
-                      10+ Years of Excellence
+                      13+ Years of Excellence
                     </p>
                   </div>
                 </div>

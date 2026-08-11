@@ -15,7 +15,7 @@ export const pages = {
   about: {
     title: "About Credo Migration Services Limited | Licensed NZ Immigration Adviser",
     description:
-      "Led by Manisha Verma, IAA Licensed Immigration Adviser #201300026. 10+ years helping individuals and families migrate to New Zealand.",
+      "Led by Manisha Verma, IAA Licensed Immigration Adviser #201300026. 13+ years helping individuals and families migrate to New Zealand.",
     intro: {
       headline: "Your Trusted Partner in Immigration",
       paragraphs: [

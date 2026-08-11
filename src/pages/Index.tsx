@@ -133,10 +133,10 @@ export default function Index() {
                 </span>
               </div>
               <div className="text-primary-foreground/80 text-sm">
-                500+ Successful Applications
+                1000+ Successful Applications
               </div>
               <div className="text-primary-foreground/80 text-sm">
-                10+ Years Experience
+                13+ Years Experience
               </div>
             </div>
           </div>
@@ -298,7 +298,7 @@ export default function Index() {
                 <div className="grid grid-cols-2 gap-6">
                   <div className="bg-primary-foreground/10 rounded-xl p-6 text-center">
                     <div className="text-4xl font-serif font-bold text-accent mb-2">
-                      500+
+                      1000+
                     </div>
                     <div className="text-primary-foreground/80 text-sm">
                       Successful Visas
@@ -314,7 +314,7 @@ export default function Index() {
                   </div>
                   <div className="bg-primary-foreground/10 rounded-xl p-6 text-center">
                     <div className="text-4xl font-serif font-bold text-accent mb-2">
-                      10+
+                      13+
                     </div>
                     <div className="text-primary-foreground/80 text-sm">
                       Years Experience

@@ -25,7 +25,7 @@ export const siteSettings = {
   },
   stats: {
     successRate: "98%",
-    successfulApplications: "500+",
-    yearsExperience: "10+",
+    successfulApplications: "1000+",
+    yearsExperience: "13+",
   },
 };
