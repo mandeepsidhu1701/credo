@@ -30,7 +30,7 @@ export function Footer() {
             <div className="flex items-center gap-3">
               <img
                 src="/logo.png"
-                alt="Credo Migration Services Ltd logo"
+                alt="Credo Migration Services Limited logo"
                 className="h-12 w-12 rounded-full object-cover"
               />
               <div className="flex flex-col">
@@ -38,7 +38,7 @@ export function Footer() {
                   Credo Migration
                 </span>
                 <span className="text-xs text-primary-foreground/70 tracking-wide">
-                  SERVICES PTY LTD
+                  SERVICES LIMITED
                 </span>
               </div>
             </div>
@@ -55,7 +55,7 @@ export function Footer() {
                 rel="noopener noreferrer"
                  className="px-4 py-2 rounded-md text-sm font-medium transition-colors link-underline"
                 >
-                <span>IAA License #201300026</span>
+                <span>IAA Licence #201300026</span>
               </a>
             </div>
             
@@ -68,7 +68,7 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="px-4 py-2 rounded-md text-sm font-medium transition-colors link-underline"
                 >              
-                <span>MARA License #2318124</span>
+                <span>MARA Licence #2318124</span>
               </a>
             </div>
 
@@ -177,7 +177,7 @@ export function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-primary-foreground/10">
         <div className="container-custom py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/60">
-          <p>© {currentYear} Credo Migration Services Ltd. All rights reserved.</p>
+          <p>© {currentYear} Credo Migration Services Limited. All rights reserved.</p>
           <p className="text-xs">
             Built by{" "}
             <a

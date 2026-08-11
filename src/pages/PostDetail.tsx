@@ -187,7 +187,7 @@ const { data: post, isLoading } = usePost(slug ?? "");
                     Need Help?
                   </h3>
                   <p className="text-primary-foreground/80 text-sm mb-4">
-                    Get personalized advice for your immigration journey.
+                    Get personalised advice for your immigration journey.
                   </p>
                   <Link to="/contact-us">
                     <Button className="w-full btn-gold">

@@ -49,7 +49,7 @@ export default function Posts() {
         <link rel="canonical" href={`${siteSettings.siteUrl}/posts`} />
       </Helmet>
       <PageHero
-        subtitle="Immigration Latest News"
+        subtitle="Latest Immigration News"
         title="News & Updates"
         description="Stay informed with the latest immigration news, policy updates, and helpful guides for your New Zealand journey."
       />
@@ -142,7 +142,7 @@ export default function Posts() {
               Have Questions About Your Visa?
             </h2>
             <p className="text-xl text-primary-foreground/80 mb-8">
-              Get personalized advice from our licensed immigration adviser.
+              Get personalised advice from our licensed immigration adviser.
             </p>
             <Link to="/contact-us">
               <Button className="btn-gold text-lg px-8 py-6">

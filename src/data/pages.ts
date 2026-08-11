@@ -13,14 +13,14 @@ export const pages = {
     },
   },
   about: {
-    title: "About Credo Migration Services Ltd | Licensed NZ Immigration Adviser",
+    title: "About Credo Migration Services Limited | Licensed NZ Immigration Adviser",
     description:
       "Led by Manisha Verma, IAA Licensed Immigration Adviser #201300026. 10+ years helping individuals and families migrate to New Zealand.",
     intro: {
       headline: "Your Trusted Partner in Immigration",
       paragraphs: [
-        "Credo Migration Services Ltd is a licensed immigration advisory firm based in New Zealand. Led by Manisha Verma, a licensed immigration adviser with the Immigration Advisers Authority (IAA #201300026), we have been helping individuals and families achieve their New Zealand migration dreams.",
-        "Whether you're looking to study, work, or settle permanently in New Zealand, we provide personalized guidance and support throughout your immigration journey. Our expertise spans all visa categories including skilled migrant, work, student, family, and investor visas.",
+        "Credo Migration Services Limited is a licensed immigration advisory firm based in New Zealand. Led by Manisha Verma, a licensed immigration adviser with the Immigration Advisers Authority (IAA #201300026), we have been helping individuals and families achieve their New Zealand migration dreams.",
+        "Whether you're looking to study, work, or settle permanently in New Zealand, we provide personalised guidance and support throughout your immigration journey. Our expertise spans all visa categories including skilled migrant, work, student, family, and investor visas.",
       ],
     },
   },
@@ -32,7 +32,7 @@ export const pages = {
   testimonials: {
     title: "Client Testimonials | Credo Migration Services",
     description:
-      "Read success stories from clients who achieved their New Zealand visa and residence goals with Credo Migration Services Ltd.",
+      "Read success stories from clients who achieved their New Zealand visa and residence goals with Credo Migration Services Limited.",
   },
   posts: {
     title: "Immigration News & Guides | Credo Migration",
@@ -42,6 +42,6 @@ export const pages = {
   contact: {
     title: "Contact Credo Migration Services | Book a Consultation",
     description:
-      "Get in touch with Credo Migration Services Ltd for a free consultation. Auckland-based licensed immigration adviser serving NZ & AU.",
+      "Get in touch with Credo Migration Services Limited for a free consultation. Auckland-based licensed immigration adviser serving NZ & AU.",
   },
 };

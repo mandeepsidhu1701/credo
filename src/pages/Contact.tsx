@@ -198,7 +198,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                     <Label htmlFor="message">Your Message *</Label>
                     <Textarea
                       id="message"
-                      placeholder="Please tell us about your visa situation, current location, and the type of advice you require. Our team will review your enquiry and arrange a suitable consultation time...."
+                      placeholder="Please tell us about your visa situation, current location, and the type of advice you require. Our team will review your enquiry and arrange a suitable consultation time."
                       rows={5}
                       value={formData.message}
                       onChange={(e) =>
@@ -296,9 +296,9 @@ const handleSubmit = async (e: React.FormEvent) => {
                         Consultations
                       </h3>                     
                       <p className="text-sm text-muted-foreground mt-1">
-                         By appointment only
+                        By appointment only.
 
-                        Please send your enquiry first. 
+                        Please send your enquiry first.
                         Once we review your situation, we will arrange a suitable consultation time 
                         either online or face-to-face.
                       </p>

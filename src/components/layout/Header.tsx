@@ -97,7 +97,7 @@ export function Header() {
                   Credo Migration
                 </span>
                 <span className="text-sm text-gray-500 tracking-wider uppercase">
-                  Services PTY LTD
+                  Services Limited
                 </span>
               </div>
             </Link>

@@ -71,7 +71,7 @@ export default function About() {
       <PageHero
         subtitle="About Us"
         title="Your Trusted Immigration Partner"
-        description="Learn about our mission, values, and the expert team behind Credo Migration Services Ltd."
+        description="Learn about our mission, values, and the expert team behind Credo Migration Services Limited."
       />
 
       {/* About Content */}
@@ -86,7 +86,7 @@ export default function About() {
                 Helping Dreams Take Flight Since 2013
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                Credo Migration Services Ltd was founded with a simple mission: to
+                Credo Migration Services Limited was founded with a simple mission: to
                 provide first-class immigration advisory services with a personal
                 touch. Based in Auckland, New Zealand, we have been helping
                 individuals and families navigate the complex immigration landscape
@@ -94,7 +94,7 @@ export default function About() {
               </p>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 Our founder, Manisha Verma, is a licensed immigration adviser with
-                extensive experience across all visa categories, Manisha leads our
+                extensive experience across all visa categories. Manisha leads our
                 team with dedication and expertise.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-8">
@@ -236,7 +236,7 @@ export default function About() {
                 Comprehensive Visa Services
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-                We specialize in all New Zealand visa categories and immigration
+                We specialise in all New Zealand visa categories and immigration
                 pathways. Our expertise ensures you receive accurate advice and
                 professional representation for your application.
               </p>
@@ -298,7 +298,7 @@ export default function About() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground text-lg mb-2">
-                      Personalized Support
+                      Personalised Support
                     </h3>
                     <p className="text-muted-foreground">
                       We also support students with accommodation, institution

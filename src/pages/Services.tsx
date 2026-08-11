@@ -30,7 +30,7 @@ const serviceCategories = [
     description:
       "The Skilled Migrant Category (SMC) is a points-based residence visa for skilled workers. We help you navigate the Expression of Interest (EOI) process and guide you through to residence approval.",
     features: [
-      "Points assessment and optimization",
+      "Points assessment and optimisation",
       "Expression of Interest (EOI) submission",
       "Supporting documentation preparation",
       "Job search support and employer liaison",
@@ -134,7 +134,7 @@ const serviceCategories = [
     title: "Visitor Visas",
     subtitle: "Short-term Entry",
     description:
-      "Whether you're visiting for tourism, business, or to see family, we help with visitor visa applications including extensions and specialized visitor categories.",
+      "Whether you're visiting for tourism, business, or to see family, we help with visitor visa applications including extensions and specialised visitor categories.",
     features: [
       "Tourist Visitor Visa",
       "Business Visitor Visa",
@@ -163,7 +163,7 @@ const serviceCategories = [
     title: "Appeals & Section 61",
     subtitle: "Special Requests",
     description:
-      "If your visa has been declined, we can help. We specialize in Section 61 requests and Immigration and Protection Tribunal (IPT) appeals to give your case another chance.",
+      "If your visa has been declined, we can help. We specialise in Section 61 requests and Immigration and Protection Tribunal (IPT) appeals to give your case another chance.",
     features: [
       "Section 61 special direction requests",
       "Immigration and Protection Tribunal appeals",

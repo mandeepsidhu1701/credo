@@ -260,7 +260,7 @@ export default function Index() {
                 <span className="text-accent">Immigration</span>
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                Credo Migration Services Ltd is a licensed immigration advisory
+                Credo Migration Services Limited is a licensed immigration advisory
                 firm based in New Zealand. Led by Manisha Verma, a licensed
                 immigration adviser with the Immigration Advisers Authority (IAA
                 #201300026), we have been helping individuals and families
@@ -269,12 +269,12 @@ export default function Index() {
               <div className="grid grid-cols-2 gap-8 items-center justify-items-center">
                 <img src={trustBadge} alt="IAA Licensed Adviser" />
               </div>
-              <p className="test-mutes-foreground leading-relaxed mb-8">
+              <p className="text-muted-foreground leading-relaxed mb-8">
                 Licensed Immigration Adviser (IAA #201300026) & Registered Migration Agent (MARN #2318124)
               </p>
               <p className="text-muted-foreground leading-relaxed mb-8">
                 Whether you're looking to study, work, or settle permanently in
-                New Zealand, we provide personalized guidance and support
+                New Zealand, we provide personalised guidance and support
                 throughout your immigration journey. Our expertise spans all
                 visa categories including skilled migrant, work, student,
                 family, and investor visas.
