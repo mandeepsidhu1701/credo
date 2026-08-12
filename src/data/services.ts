@@ -17,7 +17,7 @@ export interface ServiceSummary {
 }
 
 export const services: ServiceSummary[] = [
- {
+  {
     id: "work-visa",
     title: "Work Visas & AEWV",
     description:
@@ -33,7 +33,6 @@ export const services: ServiceSummary[] = [
     icon: Briefcase,
     href: "/services#skilled-migrant",
   },
-  
   {
     id: "student-visa",
     title: "Student Visas",
@@ -71,11 +70,12 @@ export const services: ServiceSummary[] = [
 export const consultationServiceOptions = [
   "Skilled Migrant Category",
   "Employer Accreditation & Job Checks",
-  "Work Visa (AEWV/Essential Skills)",
+  "Work Visa (AEWV)",
   "Student Visa",
   "Family/Partner Visa",
   "Parent Category Visa",
-  "Investor/Entrepreneur Visa",
+  "Entrepreneur Work Visa",
+  "Active Investor Plus Visa",
   "Visitor Visa",
   "Section 61 Request / Appeal",
   "Other / General Enquiry",

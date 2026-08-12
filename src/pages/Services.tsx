@@ -11,9 +11,7 @@ import {
   Users,
   TrendingUp,
   Plane,
-  FileText,
   Scale,
-  Home,
   Clock,
   CheckCircle,
   ArrowRight,
@@ -28,9 +26,9 @@ const serviceCategories = [
     title: "Skilled Migrant Category",
     subtitle: "Permanent Residence",
     description:
-      "The Skilled Migrant Category (SMC) is a points-based residence visa for skilled workers. We help you navigate the Expression of Interest (EOI) process and guide you through to residence approval.",
+      "The Skilled Migrant Category (SMC) is a residence visa for skilled workers. From August 2026 it offers three routes — a points-based pathway, a Skilled Work Experience pathway, and a Trades and Technician pathway. We assess which pathway best fits you and guide you through to residence approval.",
     features: [
-      "Points assessment and optimisation",
+      "Pathway assessment and eligibility check",
       "Expression of Interest (EOI) submission",
       "Supporting documentation preparation",
       "Job search support and employer liaison",
@@ -38,34 +36,34 @@ const serviceCategories = [
     ],
   },
   {
-  id: "employer-accreditation",
-  icon: Building2,
-  title: "Employer Accreditation",
-  subtitle: "For New Zealand Businesses",
-  description:
-    "Employer Accreditation is required for New Zealand businesses wishing to hire migrant workers under the Accredited Employer Work Visa (AEWV) scheme. We assist employers throughout the accreditation process, ensuring compliance with Immigration New Zealand requirements.",
-  features: [
-    "Accreditation eligibility assessment",
-    "Business documentation review",
-    "Accreditation application preparation",
-    "Immigration compliance guidance",
-    "Support with renewals and ongoing obligations",
-  ],
+    id: "employer-accreditation",
+    icon: Building2,
+    title: "Employer Accreditation",
+    subtitle: "For New Zealand Businesses",
+    description:
+      "Employer Accreditation is required for New Zealand businesses wishing to hire migrant workers under the Accredited Employer Work Visa (AEWV) scheme. We assist employers throughout the accreditation process, ensuring compliance with Immigration New Zealand requirements.",
+    features: [
+      "Accreditation eligibility assessment",
+      "Business documentation review",
+      "Accreditation application preparation",
+      "Immigration compliance guidance",
+      "Support with renewals and ongoing obligations",
+    ],
   },
   {
-  id: "job-check-applications",
-  icon: FileCheck,
-  title: "Job Check Applications",
-  subtitle: "Hiring Migrant Workers",
-  description:
-    "A Job Check is required before an accredited employer can offer certain roles to migrant workers under the AEWV pathway. We guide employers through the process, ensuring role requirements meet Immigration New Zealand standards.",
-  features: [
-    "Job Check eligibility assessment",
-    "Labour market and advertising guidance",
-    "Role description review",
-    "Job Check application preparation",
-    "Support through Immigration NZ requests",
-  ],
+    id: "job-check-applications",
+    icon: FileCheck,
+    title: "Job Check Applications",
+    subtitle: "Hiring Migrant Workers",
+    description:
+      "A Job Check is required before an accredited employer can offer certain roles to migrant workers under the AEWV pathway. We guide employers through the process, ensuring role requirements meet Immigration New Zealand standards.",
+    features: [
+      "Job Check eligibility assessment",
+      "Labour market and advertising guidance",
+      "Role description review",
+      "Job Check application preparation",
+      "Support through Immigration NZ requests",
+    ],
   },
   {
     id: "work-visa",
@@ -73,12 +71,12 @@ const serviceCategories = [
     title: "Work Visas",
     subtitle: "Temporary & Long-term Employment",
     description:
-      "We assist with various work visa categories including the Accredited Employer Work Visa (AEWV), Essential Skills, and other employment-based visas to help you work legally in New Zealand.",
+      "We assist with a range of work visa categories, including the Accredited Employer Work Visa (AEWV) and other employment-based visas, to help you work legally in New Zealand.",
     features: [
       "Accredited Employer Work Visa (AEWV)",
-      "Essential Skills Work Visa",
       "Post-Study Work Visa",
-      "Talent (Accredited Employer) Visa",
+      "Specific Purpose Work Visa",
+      "Partner of a Worker Work Visa",
       "Working Holiday Visa guidance",
     ],
   },
@@ -116,16 +114,16 @@ const serviceCategories = [
   {
     id: "investor",
     icon: TrendingUp,
-    title: "Investor & Entrepreneur",
-    subtitle: "Business Migration",
+    title: "Business & Investor Migration",
+    subtitle: "Entrepreneur & Investor Visas",
     description:
-      "For those looking to invest or establish business in New Zealand, we provide guidance on investor and entrepreneur visa categories with comprehensive business migration support.",
+      "For those looking to invest in or establish a business in New Zealand, we provide guidance on the Entrepreneur Work Visa and the Active Investor Plus Visa, with comprehensive business migration support.",
     features: [
-      "Investor 1 Category",
-      "Investor 2 Category",
       "Entrepreneur Work Visa",
       "Entrepreneur Residence Visa",
+      "Active Investor Plus Visa",
       "Business plan development support",
+      "Investment structuring guidance",
     ],
   },
   {
@@ -141,20 +139,6 @@ const serviceCategories = [
       "Family Visit Visa",
       "Visa extensions",
       "Multi-entry visa applications",
-    ],
-  },
-  {
-    id: "ltbv",
-    icon: Home,
-    title: "Long Term Business Visa",
-    subtitle: "LTBV Category",
-    description:
-      "The Long Term Business Visa allows you to establish and operate a business in New Zealand. We guide you through the application process and business planning requirements.",
-    features: [
-      "Business plan preparation",
-      "LTBV application submission",
-      "Compliance monitoring",
-      "Transition to residence pathway",
     ],
   },
   {
